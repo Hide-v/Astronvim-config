@@ -28,6 +28,9 @@ return {
         neovide_cursor_anitialiasing = true,
         neovide_cursor_animate_in_insert_mode = true,
         neovide_cursor_vfx_mode = "pixiedust", -- options "railgun、torpedo、pixiedust etc."
+        neovide_cursor_vfx_particle_lifetime = 3,
+        neovide_cursor_vfx_particle_density = 12.0,
+        neovide_cursor_vfx_particle_speed = 9.0,
       },
     },
   },
