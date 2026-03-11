@@ -48,6 +48,21 @@ return {
     opts = {
       mappings = {
         n = {
+          -- 放大
+          ["<C-=>"] = {
+            function() vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1 end,
+            desc = "Increase Neovide scale factor",
+          },
+          -- 缩小
+          ["<C-->"] = {
+            function() vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1 end,
+            desc = "Decrease Neovide scale factor",
+          },
+          -- 重置
+          ["<C-0>"] = {
+            function() vim.g.neovide_scale_factor = 1.0 end,
+            desc = "Reset Neovide scale factor",
+          },
           ["<Leader>e"] = {
             function() _G.Snacks.explorer() end,
             desc = "Toggle Snacks Explorer",
@@ -80,7 +95,7 @@ return {
           ["<C-S-v>"] = { '"+p', desc = "Paste from system clipboard" },
         },
         i = {
-          ["<C-S-v>"] = { '"+p', desc = "Paste from system clipboard" },
+          ["<C-S-v>"] = { "<C-r>+", desc = "Paste from system clipboard" },
         },
         t = {
           -- setting a mapping to false will disable it
